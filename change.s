@@ -26,16 +26,16 @@ newline: .asciiz "\n"
 
 	.text
 divide:
-	add		$t2, 1
+	add		$t2, 1				#increment counter by 1 to determine which coin to check
 	div		$t0, $t1			#divide by dividend
 	mflo	$t1
 	mfhi	$t0
 	beqz	$t1, changer		#go to changer if remainder is 0
 	li		$v0, 4
-	syscall						#print out quarter message
+	syscall						#print out coins message
 	move	$a0, $t1
 	li		$v0, 1
-	syscall						#print out # of quarters
+	syscall						#print out # of coins
 	la		$a0, newline
 	li		$v0, 4
 	syscall
