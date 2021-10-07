@@ -44,6 +44,7 @@ divide:
 quarterdivide:
 	li		$t1, 25				#set divisor to 25
 	la		$a0, quarter		#preemptively set message to quarter
+	b		divide
 
 dimedivide:
 	li		$t1, 10				#set divisor to 10
