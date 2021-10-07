@@ -53,7 +53,7 @@ dimedivide:
 
 nickeldivide:
 	li		$t1, 5				#set divisor to 5
-	la		$a0, dime			#preemptively set message to nickel
+	la		$a0, nickel			#preemptively set message to nickel
 	b		divide
 
 pennydivide:					#only need to check remainder
